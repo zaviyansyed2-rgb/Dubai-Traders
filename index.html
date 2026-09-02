@@ -4,7 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dubai Traders</title>
-
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#111;color:white;font-family:Arial,sans-serif}
+.top-header{
+background:#000;
+padding:15px 18px;
+position:sticky;
+top:0;
+z-index:999;
+border-bottom:2px solid gold;
+}
+.header-row{
+display:flex;
+align-items:center;
+gap:12px;
+max-width:1200px;
+margin:auto;
+}
+.logo{
+color:gold;
+font-size:27px;
+font-weight:bold;
+white-space:nowrap;
+}
+.search-box{
+flex:1;
+}
+.search-box input{
+width:100%;
+padding:12px 18px;
+border-radius:25px;
+border:2px solid gold;
+background:#222;
+color:white;
+font-size:15px;
+outline:none;
+}
+.menu-btn,.login-btn,.icon-btn{
+border-radius:8px;
+padding:10px 14px;
+font-size:15px;
+cursor:pointer;
+}
+.menu-btn,.login-btn{
+background:gold;
+color:#000;
+border:none;
+font-weight:bold;
+}
+.icon-btn{
+background:#222;
+color:white;
+border:1px solid gold;
+}
+.categories{
+display:flex;
+justify-content:center;
+gap:22px;
+flex-wrap:wrap;
+margin-top:14px;
+}
+.categories a{
+color:gold;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+}
+@media(max-width:700px){
+.top-header{padding:12px}
+.header-row{flex-wrap:wrap}
+.logo{font-size:23px;order:1}
+.menu-btn{order:2}
+.icon-btn{order:3}
+.login-btn{order:4}
+.search-box{order:5;flex-basis:100%}
+.categories{
+gap:10px 16px;
+font-size:14px;
+}
+}
+</style>
 <style>
 *{
 margin:0;
@@ -16,120 +96,53 @@ font-family:Arial,sans-serif;
 body{
 background:#111;
 color:white;
-}
+<header class="top-header">
 
-header{
-background:black;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-position:sticky;
-top:0;
-}
+  <div class="header-row">
 
-.logo{
-color:gold;
-font-size:30px;
-font-weight:bold;
-}
+    <div class="logo">
+      Dubai Traders
+    </div>
 
-.search{
-width:40%;
-padding:10px;
-border:none;
-border-radius:5px;
-}
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="🔍 Search products..."
+        id="searchInput"
+      >
+    </div>
 
-.icons button{
-padding:10px;
-margin-left:5px;
-cursor:pointer;
-}
+    <button class="menu-btn" id="menuBtn">
+      ☰ Menu
+    </button>
 
-.hero{
-text-align:center;
-padding:80px 20px;
-background:linear-gradient(135deg,#000,#333);
-}
+    <button class="icon-btn">
+      ❤️
+    </button>
 
-.hero h1{
-font-size:48px;
-color:gold;
-margin-bottom:15px;
-}
+    <button class="icon-btn" id="cartBtn">
+      🛒 <span id="cartCount">0</span>
+    </button>
 
-.hero p{
-font-size:20px;
-margin-bottom:20px;
-}
+    <button class="login-btn">
+      Login
+    </button>
 
-.hero button{
-background:gold;
-color:black;
-padding:15px 30px;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-}
+  </div>
 
-.products{
-padding:50px 20px;
-text-align:center;
-}
+  <nav class="categories">
 
-.products h2{
-color:gold;
-margin-bottom:30px;
-font-size:35px;
-}
+    <a href="#jewelry">Jewelry</a>
+    <a href="#cosmetics">Cosmetics</a>
+    <a href="#handbags">Handbags</a>
+    <a href="#household">Household</a>
+    <a href="#new-arrivals">New Arrivals</a>
+    <a href="#most-selling">Most Selling</a>
+    <a href="#sale">Sale</a>
 
-.cards{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
+  </nav>
 
-.card{
-background:#222;
-width:220px;
-padding:20px;
-border-radius:10px;
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-}
-
-.card h3{
-margin-top:10px;
-}
-
-.price{
-color:gold;
-font-size:20px;
-margin:10px 0;
-}
-
-.buy{
-background:gold;
-color:black;
-padding:10px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-width:100%;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
+</header>
 
 <div class="logo">
 Dubai Traders
